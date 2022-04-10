@@ -1,0 +1,2 @@
+
+	Numerele mai mari decat valoarea 7.70 sunt: 7.70 

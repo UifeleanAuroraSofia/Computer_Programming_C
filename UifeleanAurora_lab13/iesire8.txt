@@ -1,0 +1,2 @@
+
+	Partea intreaga a numerelor citite este: 1 2 3 4 5 

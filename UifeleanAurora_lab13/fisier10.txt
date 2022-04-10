@@ -1,0 +1,9 @@
+
+	Nume: aaa
+	Prenume: aaa
+	Grupa: 1
+	Media: 1.20
+	Nume: aaa
+	Prenume: aaa
+	Grupa: 1
+	Media: 1.20
