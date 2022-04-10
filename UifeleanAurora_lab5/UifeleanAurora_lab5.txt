@@ -1,0 +1,287 @@
+/* UifeleanAuroraSofia, ETTI, Seria A, grupa 4
+Algoritm pentru determinarea duratei unei calatorii (ore si minute) dintre Cluj si Brasov
+*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	int h1, h2, m1, m2;
+	cin >> h1 >> m1 >> h2 >> m2;
+	if (m1 <= m2)
+	{
+		if (m2 - m1 < 10 && m2 - m1 > 0)
+		{
+			cout << h2 - h1 << ":0" << m2 - m1;
+		}
+		else if (m2 - m1 >= 10)
+		{
+			cout << h2 - h1 << ":" << m2 - m1;
+		}
+		else
+		{
+			cout << h2 - h1 << ":00";
+		}
+	}
+	else
+	{
+		cout << h2 - h1 - 1 << ":" << m2 + 60 - m1;
+	}
+	return 0;
+}
+
+
+
+
+/* UifeleanAuroraSofia, ETTI, Seria A, grupa 4
+Algoritm pentru calcularea capacitatii in serie si in paralel a doua capacitati C1 si C2
+(numere reale)
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+using namespace std;
+
+float capacitate_serie(float a, float b);
+float capacitate_paralel(float a, float b);
+
+int main()
+{
+    float C1, C2;
+    cout << "Introduceti valorile a doua capacitati: ";
+    cin >> C1 >> C2;
+    cout << setprecision(4) << capacitate_serie(C1, C2) << endl;
+    cout << setprecision(4) << capacitate_paralel(C1, C2);
+    return 0;
+}
+
+float capacitate_serie(float a, float b)
+{
+    return a + b;
+}
+
+float capacitate_paralel(float a, float b)
+{
+    return (a + b) / (a * b);
+}
+
+
+
+
+/* UifeleanAuroraSofia, ETTI, Seria A, grupa 4
+Algoritm pentru determinarea lungimii si ariei unui cerc
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+using namespace std;
+
+#define pi 3.14
+
+int main()
+{
+	int r;
+	cin >> r;
+	float l = 2 * pi * r;
+	float a = pi * r * r;
+	cout.width(10);
+	cout << left << fixed << setprecision(3) << l << " " << a;
+	return 0;
+}
+
+
+
+
+/* UifeleanAuroraSofia, ETTI, Seria A, grupa 4
+Algoritm pentru rezolvarea unei ecuatii de gradul I stiind coeficientii a si b
+*/
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    int a, b;
+    float x;
+    cin >> a >> b;
+    x = (float)-b / a;
+    cout << x;
+    return 0;
+}
+
+
+
+
+/* UifeleanAuroraSofia, ETTI, Seria A, grupa 4
+Algoritm pentru determinarea timpului in care se intalnesc doua masini
+care merg cu viteza v1 si respectiv viteza v2
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int v1, v2;
+	cin >> v1 >> v2;
+	float t = (float) 100 / (v1 + v2);
+	cout << t * 60;
+	return 0;
+}
+
+
+
+
+/* UifeleanAuroraSofia, ETTI, Seria A, grupa 4
+Algoritm pentru calcularea ipotenuzei si perimetrului unui triunghi in functie de catete
+(numere reale)
+*/
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+float ipotenuza(float a, float b);
+float perimetrul(float a, float b);
+
+int main()
+{
+    float C1, C2;
+    cin >> C1 >> C2;
+    cout << ipotenuza(C1, C2) << endl << perimetrul(C1, C2);
+    return 0;
+}
+
+float ipotenuza(float a, float b)
+{
+    return sqrt((a * a) + (b * b));
+}
+
+float perimetrul(float a, float b)
+{
+    return ipotenuza(a, b) + a + b;
+}
+
+
+
+
+/* UifeleanAuroraSofia, ETTI, Seria A, grupa 4
+Algoritm pentru calcularea rezistentei in serie si in paralel a doua rezistente R1 si R2
+(numere reale)
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+using namespace std;
+
+float rezistenta_serie(float a, float b);
+float rezistenta_paralel(float a, float b);
+
+int main()
+{
+    float R1, R2;
+    cout << "Introduceti valorile a doua rezistente: ";
+    cin >> R1 >> R2;
+    cout << setprecision(3) << rezistenta_serie(R1, R2) << endl;
+    cout << setprecision(3) << rezistenta_paralel(R1, R2);
+    return 0;
+}
+
+float rezistenta_serie(float a, float b)
+{
+    return a + b;
+}
+
+float rezistenta_paralel(float a, float b)
+{
+    return (a + b) / (a * b);
+}
+
+
+
+
+/* UifeleanAuroraSofia, ETTI, Seria A, grupa 4
+Algoritm pentru calcularea rezistentei si a capacitaii in serie si in paralel 
+a doua rezistente R1 si R2, respectiv doua capacitati C1 si C2
+(numere reale)
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+using namespace std;
+
+float rezistenta_serie(float a, float b);
+float rezistenta_paralel(float a, float b);
+
+float capacitate_serie(float a, float b);
+float capacitate_paralel(float a, float b);
+
+int main()
+{
+    int R1, R2, C1, C2;
+    cout << "Introduceti valorile a doua rezistente: ";
+    cin >> R1 >> R2;
+    cout << "Introduceti valorile a doua capacitati: ";
+    cin >> C1 >> C2;
+    cout << setprecision(3) << rezistenta_serie(R1, R2) << endl;
+    cout << setprecision(3) << rezistenta_paralel(R1, R2) << endl;
+    cout << setprecision(4) << capacitate_serie(C1, C2) << endl;
+    cout << setprecision(4) << capacitate_paralel(C1, C2);
+    return 0;
+}
+
+float rezistenta_serie(float a, float b)
+{
+    return a + b;
+}
+
+float rezistenta_paralel(float a, float b)
+{
+    return (a + b) / (a * b);
+}
+
+float capacitate_serie(float a, float b)
+{
+    return a + b;
+}
+
+float capacitate_paralel(float a, float b)
+{
+    return (a + b) / (a * b);
+}
+
+
+
+
+/* UifeleanAuroraSofia, ETTI, Seria A, grupa 4
+Algoritm pentru afisarea numelor si notelor unor studenti
+(numere reale)
+*/
+
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+    float n1, n2;
+    char s1[21], s2[21];
+    cin.getline(s1, 21); 
+    cin.getline(s2, 21); 
+    cin >> n1; 
+    cin >> n2;
+    float media = (n1 + n2) / 2;
+    cout.width(20);
+    cout << left << s1 << " " << setprecision(3) << (float)media << endl;
+    cout.width(20);
+    cout << left << s2 << " " << setprecision(3) << (float)media << endl;
+    return 0;
+}
