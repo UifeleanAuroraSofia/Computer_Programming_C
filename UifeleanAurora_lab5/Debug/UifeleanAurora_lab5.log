@@ -1,4 +1,0 @@
-﻿  UifeleanAurora_lab5_pr7.cpp
-D:\Facultate\Programare\UifeleanAurora_lab5\UifeleanAurora_lab5_pr7.cpp(21,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-D:\Facultate\Programare\UifeleanAurora_lab5\UifeleanAurora_lab5_pr7.cpp(22,10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  UifeleanAurora_lab5.vcxproj -> D:\Facultate\Programare\UifeleanAurora_lab5\Debug\UifeleanAurora_lab5.exe
